@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=s, initial-scale=1.0" />
+    <title>Top library</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <section alt="logo Top-lib">
+        <span> Top library </span>
+      </section>
+      <nav class="nav" alt="main navegation options">
+        <button id="upload">UPLOAD</button>
+        <button id="edit">EDIT</button>
+      </nav>
+    </header>
+    <main>
+      <div class="bookset" id="uploadform" alt="pop up settings">
+        <form>
+          <div class="formh">
+            <h1 id="headerlabel">Submit a New Book</h1>
+          </div>
+
+          <div class="form1">
+            <label for="title" id="titlelabel"
+              >1.What is the Book's title?</label
+            >
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Insert Alphanumerical text only"
+              maxlength="30"
+            />
+            <small id="titlewarning" class="titlewarning"
+              >A-Z a-z 0-9 . spaces only in between text length:4-30
+            </small>
+          </div>
+
+          <div class="form2">
+            <label id="authorlabel" for="author"
+              >2.What is the author's name?</label
+            >
+            <input
+              type="text"
+              name="author"
+              id="author"
+              placeholder="insert alphabetical characters only"
+              maxlength="20"
+            />
+            <small class="authorwarning" id="authorwarning"
+              >(A-Z)a-z 0-9. spaces only in between text length:4-20</small
+            >
+          </div>
+          <div class="form3">
+            <label for="status">3.Have you read the entire book?</label>
+            <select name="status" id="status">
+              <option value="Read">Read</option>
+              <option value="Not Read">Not Read</option>
+              <option value="Reading">Reading</option>
+            </select>
+          </div>
+          <div class="form4">
+            <button type="button" id="submitbtn">Save</button>
+          </div>
+        </form>
+      </div>
+      <section id="bookarea">
+        <div class="item-example">
+          <span class="title"> Title Example</span>
+          <span class="author">Author Example</span>
+          <span class="status"> Status </span>
+        </div>
+      </section>
+
+      <footer>
+        <a
+          href="https://github.com/NotAndyforsure?tab=repositories"
+          target="_blank"
+          >NotAndyforsure@github</a
+        >
+      </footer>
+    </main>
+  </body>
+</html>

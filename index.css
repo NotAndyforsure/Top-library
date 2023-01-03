@@ -1,0 +1,265 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Default //////////////////////////////////////////////// */
+
+header {
+  background: #9333ea;
+  font-size: 2.4em;
+  font-weight: bolder;
+  font-family: "Rubik Gemstones", cursive;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+header > section,
+header > nav,
+header > nav > button {
+  flex: 0 1 auto;
+}
+
+header > section,
+header > nav {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+header > section > span {
+  padding-left: 0.3em;
+}
+
+header > nav {
+  flex-direction: row;
+  justify-content: end;
+  padding: 10px;
+}
+
+header > nav > button {
+  margin-right: 6px;
+  border: 3px solid black;
+  border-radius: 50%;
+  height: 6em;
+  width: 6em;
+  font-size: 0.5em;
+  font-weight: bolder;
+  font-family: "Rubik Gemstones", cursive;
+  background: lightgray;
+  color: #9333ea;
+}
+
+header > nav > button:hover {
+  color: lightgray;
+  background: #9333ea;
+}
+
+/* Header section//////////////////////////////////////////////////////////////////////// */
+
+main {
+  overflow-y: auto;
+  background: black;
+  flex: 1 1 auto;
+  height: 93vh;
+  width: 100vw;
+  display: grid;
+  grid-template: 19fr 1fr/1fr;
+}
+
+main > section {
+  grid-area: 1/1/2/2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5em 5em;
+  padding: 3em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  place-items: center center;
+}
+
+main > section > .item-example {
+  background: lightgray;
+  border-radius: 1em;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik Gemstones", cursive;
+  padding: 1em;
+  text-align: center;
+  border: 2px solid gray;
+  border-left: 20px solid gray;
+}
+
+main > section > .item-example > .title {
+  font-weight: bolder;
+  font-size: 1.9em;
+  flex: 1 1 50vh;
+}
+
+main > section > .item-example > .author {
+  flex: 1 1 30vh;
+  font-size: 1.4em;
+}
+
+main > section > .item-example > .status {
+  flex: 1 1 20vh;
+  font-size: 1.4em;
+}
+
+main > footer {
+  grid-area: 2/1/3/2;
+  float: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main > footer > a {
+  color: lightgray;
+  font-size: 2em;
+  font-weight: bolder;
+  font-family: "Rubik Gemstones", cursive;
+}
+
+main > .bookset {
+  width: 80vw;
+  height: 60vh;
+  background: lightgray;
+  border-radius: 1em;
+  transform: translate(13%, 20%);
+  position: fixed;
+  visibility: hidden;
+  display: grid;
+  grid-template: 1fr/1fr;
+}
+
+.crdbtndiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  visibility: hidden;
+}
+.delbtn {
+  height: 4em;
+  width: 40%;
+  border-radius: 50%;
+  background: red;
+  font-weight: bold;
+  border: 2px dotted black;
+}
+.editbtn {
+  height: 4em;
+  width: 40%;
+  background: #84cc16;
+  border-radius: 50%;
+  font-weight: bold;
+  border: 2px dotted black;
+}
+main > .show {
+  visibility: visible;
+}
+
+main > .show > form {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 0.5fr 0.5fr/0.5fr 1fr 1fr 1fr 1fr;
+  font-family: "Rubik Gemstones", cursive;
+  grid-template-areas:
+    ". a a a a"
+    ". b b b b "
+    ". c c c c"
+    ". d d d d"
+    " e e e e e";
+}
+
+main > .show > form > .formh {
+  grid-area: a;
+}
+
+main > .show > form > .form1 {
+  grid-area: b;
+}
+
+main > .show > form > .form1 > input,
+main > .show > form > .form2 > input {
+  width: 50%;
+  border-radius: 1em;
+  margin-top: 1em;
+  height: 2em;
+  background: lightgray;
+}
+
+main > .show > form > .form1 > input:focus,
+main > .show > form > .form2 > input:focus {
+  outline: 2px solid black;
+}
+
+main > .show > form > .form3 > select {
+  width: 30%;
+  border-radius: 1em;
+  margin-top: 1em;
+  height: 2em;
+  background: lightgray;
+}
+
+main > .show > form > .form4 {
+  place-self: center;
+}
+
+main > .show > form > .form4 > button {
+  width: 20em;
+  height: 2em;
+  border-radius: 1em;
+  font-family: "Rubik Gemstones", cursive;
+  font-weight: bolder;
+  background: lightgray;
+}
+
+main > .show > form > .form2 {
+  grid-area: c;
+}
+
+main > .show > form > .form3 {
+  grid-area: d;
+}
+
+main > .show > form > .form4 {
+  grid-area: e;
+}
+
+.titlewarning,
+.authorwarning {
+  color: red;
+  visibility: hidden;
+  margin-top: 2px;
+}
+
+.show {
+  visibility: visible;
+}
+
+main > .show > form > .form1,
+main > .show > form > .form2,
+main > .show > form > .form3 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* main section /////////////////////////////////////////////////////////////////////////////////////// */
