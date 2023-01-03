@@ -260,6 +260,9 @@ editBtn.addEventListener("click", (e) => {
       headerLabel.textContent = "Update Your Book Details";
       titleLabel.textContent = "What Is Your Book's New Title?";
       authorLabel.textContent = "What Is Your Books New Author?";
+      title.value = library[updateNum].title;
+      author.value = library[updateNum].author;
+
       crazy(2);
     });
   });
